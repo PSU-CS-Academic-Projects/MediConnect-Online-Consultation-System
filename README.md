@@ -1,154 +1,6 @@
-# Project Title
+# MediConnect — Online Consultation System
 
-> Replace this line with a one sentence description of your project.
-
----
-
-# How to Submit Your Project
-
-Follow these steps carefully before filling out the sections below.
-
----
-
-## Step 1 — Use This Template
-
-1. Click the **"Use this template"** button at the top of this repository
-2. Click **"Create a new repository"**
-3. Under **Owner** make sure to select **PSU-CS-Academic-Projects** and not your personal account
-
-> If you do not see PSU-CS-Academic-Projects in the owner dropdown, you have not been added as a member yet. Contact the organization owner.
-
-4. Name your repository following this format:
-
-**Good Examples**
-* Student-Attendance-System
-* Library-Management-System
-* Campus-Navigation-App
-* Online-Enrollment-System
-
-**Avoid**
-* project
-* system
-* thesis
-* finalproject
-* group1
-
-5. Set the repository to **Public**
-
-> It must be Public so it appears on the showcase website.
-
-6. Click **"Create repository from template"**
-
----
-
-## Step 2 — Set Up Your Repository
-
-After creating the repository:
-
-1. Go to your new repository page
-2. Click the **gear icon** next to the **About** section on the right side
-3. Fill in the **Description** field with a short one sentence description of your project
-4. Paste your **live demo URL** in the **Website** field if available
-5. Under **Topics** add the relevant topics for your project
-
-**Subject Topics — choose at least one:**
-* wst (web system and technology)
-* sia (system integration architecture)
-
-**Category Topics — choose one or more:**
-* web-development
-* mobile-development
-* desktop-application
-* ai
-* machine-learning
-* cybersecurity
-* game-development
-* iot
-* research-project
-
-**Technology Topics — choose all that apply:**
-* php
-* mysql
-* laravel
-* react
-* nextjs
-* flutter
-* firebase
-* java
-* python
-* csharp
-* unity
-* godot
-
-6. Click **Save changes**
-
----
-
-## Step 3 — Add Your Screenshots
-
-1. On your computer, open the project folder you just cloned or downloaded
-2. Place your screenshots inside the `screenshots/` folder
-3. Recommended screenshots to include:
-   * Login Page
-   * Dashboard
-   * Main Features
-   * Reports or Output Pages
-   * Mobile Interface (if applicable)
-4. Name your screenshots clearly:
-
-**Good Examples**
-* login.png
-* dashboard.png
-* features.png
-
-**Avoid**
-* image1.png
-* screenshot(1).png
-* untitled.png
-
----
-
-## Step 4 — Add Your Project Code
-
-Place all your project source code inside the `src/` folder.
-The structure inside `src/` will depend on your project type.
-
-If you are uploading manually through GitHub (no Git):
-
-1. Go to your repository page on GitHub
-2. Click **"Add file"** → **"Upload files"**
-3. Drag and drop your project files
-4. Scroll down and click **"Commit changes"**
-
-If you are using Git:
-
-1. Clone the repository
-
-```bash
-git clone https://github.com/PSU-CS-Academic-Projects/your-repo-name.git
-```
-
-2. Copy your project files into the cloned folder
-3. Stage and commit your files
-
-```bash
-git add .
-git commit -m "Initial project upload"
-git push origin main
-```
-
----
-
-## Step 5 — Fill Out This README
-
-Delete everything above this line including the How to Submit section once you are done setting up.
-Then fill out all the sections below.
-
----
-
-# Project Title
-
-> One sentence description of your project.
+> A Django-based telemedicine platform that connects patients with licensed doctors for real-time online consultations, symptom reporting, and digital prescription generation.
 
 ---
 
@@ -156,104 +8,212 @@ Then fill out all the sections below.
 
 | Field | Details |
 |-------|---------|
-| Subject | e.g. Web Systems and Technologies |
-| Academic Year | e.g. 2025-2026 |
-| Project Category | e.g. Web Development |
-| Instructor | e.g. Prof. Juan Dela Cruz |
+| Subject | System Integration and Architecture (SIA) |
+| Academic Year | 2025–2026 |
+| Project Category | Web Development |
+| Instructor | Ma'am Divine Grace Caabay |
 
 ### Members
 
-* Full Name
-* Full Name
-* Full Name
+* Jophil F. Gulane
+* Vougne Froid P. Alis
+* Dianara Kristy D. Garciano
+* Ross Ivan T. Venturillo
 
 ---
 
 ## Project Description
 
-Explain what your project is and what problem it solves.
-Who is it for? What was the goal of the project?
+MediConnect is a web-based telemedicine platform designed to bridge the gap between patients and licensed medical professionals through seamless online consultations. The system allows patients to register, describe their symptoms, browse available doctors by specialty, and initiate real-time chat consultations — all from a single platform.
+
+Doctors can manage their availability status, accept incoming patient consultations, view patient medical history during sessions, and generate downloadable digital prescriptions in PDF format upon completing a consultation. An admin dashboard provides full oversight of the platform, including the ability to approve or reject incoming doctor registration requests, monitor active consultations, and manage all users.
+
+The project was built to address healthcare accessibility challenges — particularly for patients in remote areas who may not have easy access to in-person medical care. It integrates Django Channels and Daphne (ASGI) for real-time WebSocket-powered chat, ensuring smooth and responsive communication between patients and doctors.
 
 ---
 
 ## Features
 
-* Feature one
-* Feature two
-* Feature three
+* **Patient Registration & Profiles** — Patients can create accounts, fill in health info (blood type, allergies, medical history), and upload a profile picture
+* **Doctor Registration with Admin Approval** — Doctors submit credentials and license numbers; accounts are only activated after admin verification
+* **Browse Doctors by Specialty** — Patients can filter and search doctors by medical specialty and availability status
+* **Real-Time Chat Consultation** — WebSocket-powered live messaging between patient and doctor during an active consultation
+* **Image Attachment** — Patients can upload symptom photos directly inside the chat room during consultations
+* **Digital Prescription Generation** — Doctors can write prescriptions with medicine details, dosage, and instructions; a downloadable PDF is generated for the patient
+* **Doctor Availability Status** — Doctors can toggle their status (Online / Busy / Offline) from their dashboard
+* **Patient Queue System** — Doctors see a live queue of waiting patients and can accept the next consultation with one click
+* **Admin Dashboard** — Full platform overview with stats on patients, doctors, pending approvals, and active consultations
+* **Consultation History** — Both patients and doctors can view their full consultation history with status tracking and prescription links
+* **Responsive Design** — "Clinical Luxury" UI design system built with Tailwind CSS utility classes and custom CSS tokens, optimized for both desktop and mobile
 
 ---
 
 ## Technologies Used
 
-* Technology one
-* Technology two
-* Technology three
+* **Python 3.11** — Core programming language
+* **Django 4.2** — Web framework
+* **Django Channels 4** — WebSocket support for real-time chat
+* **Daphne (ASGI)** — Async server for running Django Channels
+* **PostgreSQL** — Production database (via Railway)
+* **SQLite** — Local development database
+* **ReportLab** — PDF generation for digital prescriptions
+* **Pillow** — Image processing and validation for uploaded symptom photos
+* **WhiteNoise** — Static file serving in production
+* **django-widget-tweaks** — Template-level form field customization
+* **dj-database-url** — Database URL parsing for Railway deployment
+* **python-dotenv** — Environment variable management
+* **Railway** — Cloud hosting and PostgreSQL database
+* **HTML / CSS / JavaScript** — Frontend templates and real-time UI interactions
+* **Font Awesome 6** — Icon library
+* **Google Fonts (Sora, DM Sans)** — Typography
 
 ---
 
 ## Installation Guide
 
-> Provide clear steps so anyone can run your project locally.
+### Prerequisites
+* Python 3.11+
+* Git
+
+### Steps
 
 1. Clone the repository
 
 ```bash
-git clone https://github.com/PSU-CS-Academic-Projects/your-repo-name.git
+git clone https://github.com/PSU-CS-Academic-Projects/MediConnect-Online-Consultation-System.git
 ```
 
 2. Navigate into the project folder
 
 ```bash
-cd your-repo-name
+cd MediConnect-Online-Consultation-System
 ```
 
-3. Add any additional steps specific to your project here
-   * Import the database
-   * Configure environment settings
-   * Install dependencies
-   * Run the application
+3. Create and activate a virtual environment
+
+```bash
+# Windows
+python -m venv venv
+venv\Scripts\activate
+
+# macOS / Linux
+python3 -m venv venv
+source venv/bin/activate
+```
+
+4. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+5. Create your environment file — copy the example below and save it as `.env` in the project root
+
+```env
+DJANGO_SECRET_KEY=your-secret-key-here
+DJANGO_DEBUG=True
+DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1
+MAX_UPLOAD_SIZE_MB=5
+```
+
+> Generate a secret key by running:
+> ```bash
+> python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+> ```
+
+6. Run database migrations
+
+```bash
+python manage.py migrate
+```
+
+7. Create a superuser (admin account)
+
+```bash
+python manage.py createsuperuser
+```
+
+8. Collect static files
+
+```bash
+python manage.py collectstatic
+```
+
+9. Start the development server
+
+```bash
+python manage.py runserver
+```
+
+10. Open your browser and go to `http://127.0.0.1:8000`
 
 ---
 
 ## Screenshots
 
-> Upload your screenshots inside the `screenshots/` folder and reference them here.
+> Screenshots are located inside the `screenshots/` folder.
 
-**Login Page**
+**Home / Landing Page**
 
-![Login Page](screenshots/login.png)
+![Home Page](screenshots/home.png)
 
-**Dashboard**
+**Patient Registration**
 
-![Dashboard](screenshots/dashboard.png)
+![Patient Registration](screenshots/register_patient.png)
 
-**Main Features**
+**Doctor Registration**
 
-![Features](screenshots/features.png)
+![Doctor Registration](screenshots/register_doctor.png)
+
+**Admin Dashboard**
+
+![Admin Dashboard](screenshots/admin_dashboard.png)
+
+**Doctor Approval Management**
+
+![Doctor Management](screenshots/admin_doctors.png)
+
+**Patient Dashboard**
+
+![Patient Dashboard](screenshots/patient_dashboard.png)
+
+**Browse Doctors**
+
+![Browse Doctors](screenshots/browse_doctors.png)
+
+**Consultation Room (Real-Time Chat)**
+
+![Consultation Room](screenshots/consultation_room.png)
+
+**Doctor Dashboard**
+
+![Doctor Dashboard](screenshots/doctor_dashboard.png)
+
+**Digital Prescription**
+
+![Prescription](screenshots/prescription.png)
 
 ---
 
 ## Live Demo
 
-* Live URL: https://your-live-link-here.com
+* **Live URL:** https://mediconnectpsu.up.railway.app
 
 ---
 
 ## Video Demonstration
 
-* Video Link: https://your-video-link-here.com (Optional)
+* Video Link: https://your-video-link-here.com *(Optional — update when available)*
 
 ---
 
 ## Future Improvements
 
-* Improvement one
-* Improvement two
-* Improvement three
-
----
-
-> Before submitting make sure you have completed the Repository Submission Checklist
-> in the Project Submission Guide.
-> [Project Submission Guide](https://github.com/PSU-CS-Academic-Projects/.github/blob/main/PROJECT_SUBMISSION_GUIDE.md)
+* **Video Consultation** — Integrate WebRTC for in-browser video/audio calls between patient and doctor
+* **Cloudinary Media Storage** — Migrate uploaded images to Cloudinary for persistent cloud storage across deployments
+* **Push Notifications** — Real-time browser notifications for new consultations, messages, and prescription readiness
+* **Appointment Scheduling** — Allow patients to book future appointments instead of walk-in queue only
+* **Mobile Application** — Develop a companion mobile app using Flutter or React Native for on-the-go access
+* **Multi-language Support** — Add Filipino (Tagalog) and Cuyonon language support for broader accessibility
+* **Rating & Review System** — Allow patients to rate doctors after completed consultations
+* **Analytics Dashboard** — Enhanced admin reporting with charts for consultation trends and doctor performance
