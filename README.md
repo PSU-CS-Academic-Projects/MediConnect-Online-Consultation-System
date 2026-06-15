@@ -151,12 +151,6 @@ python manage.py runserver
 
 ## Screenshots
 
-> Screenshots are located inside the `screenshots/` folder.
-
----
-
-### Public Pages
-
 **Home / Landing Page**
 > The main landing page introducing MediConnect with a hero section, how-it-works steps, and call-to-action buttons for patients and doctors.
 
