@@ -241,7 +241,7 @@ python manage.py runserver
 
 ## Video Demonstration
 
-* Video Link: https://your-video-link-here.com *(Optional — update when available)*
+* Video Link: https://www.youtube.com/watch?v=L_SryVYw19Y
 
 ---
 

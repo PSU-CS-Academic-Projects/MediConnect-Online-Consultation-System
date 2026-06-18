@@ -12,6 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'unsafe-dev-key-change-in-prod')
 DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
+INTERNAL_IPS = ['127.0.0.1']
 
 # Allow localhost for dev + Railway domain for prod
 _allowed = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1')
